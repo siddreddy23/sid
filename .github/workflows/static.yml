@@ -1,0 +1,77 @@
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Mail, Linkedin, Github } from 'lucide-react';
+
+const App = () => {
+  return (
+    <div className="min-h-screen bg-gray-100 text-gray-800 p-4">
+      {/* Header */}
+      <header className="text-center py-10">
+        <h1 className="text-4xl font-bold">Siddharth Reddy</h1>
+        <p className="text-xl mt-2">Data Analytics Enthusiast | Turning Data into Insights</p>
+      </header>
+
+      {/* About Section */}
+      <section className="max-w-4xl mx-auto my-10">
+        <Card className="p-6 shadow-xl rounded-2xl">
+          <CardContent>
+            <h2 className="text-2xl font-semibold mb-4">About Me</h2>
+            <p>
+              Hi, I'm Siddharth Reddy, a passionate data analytics learner focused on transforming raw data into meaningful insights. Currently exploring datasets, creating dashboards, and building impactful projects.
+            </p>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Projects Section */}
+      <section className="max-w-4xl mx-auto my-10">
+        <h2 className="text-3xl font-semibold mb-6 text-center">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Card className="p-4 shadow-lg rounded-2xl">
+            <CardContent>
+              <h3 className="text-xl font-bold mb-2">Project 1: Sales Dashboard</h3>
+              <p>
+                Created an interactive Power BI dashboard analyzing sales data to identify trends and opportunities.
+              </p>
+              <Button className="mt-4 w-full">View Project</Button>
+            </CardContent>
+          </Card>
+
+          <Card className="p-4 shadow-lg rounded-2xl">
+            <CardContent>
+              <h3 className="text-xl font-bold mb-2">Project 2: Customer Segmentation</h3>
+              <p>
+                Used SQL and Excel to segment customers based on purchasing behavior, optimizing marketing strategies.
+              </p>
+              <Button className="mt-4 w-full">View Project</Button>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="max-w-4xl mx-auto my-10 text-center">
+        <h2 className="text-3xl font-semibold mb-4">Get in Touch</h2>
+        <div className="flex justify-center space-x-4">
+          <a href="mailto:siddharth@example.com">
+            <Button variant="outline"><Mail className="mr-2" /> Email</Button>
+          </a>
+          <a href="https://linkedin.com/in/siddharth-reddy" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline"><Linkedin className="mr-2" /> LinkedIn</Button>
+          </a>
+          <a href="https://github.com/CodeWithSid" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline"><Github className="mr-2" /> GitHub</Button>
+          </a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center py-6 text-gray-600">
+        © 2025 Siddharth Reddy. All Rights Reserved.
+      </footer>
+    </div>
+  );
+};
+
+export default App;
